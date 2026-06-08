@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink, Loader2, BookOpen, FileText } from "lucide-react";
 
@@ -80,22 +75,20 @@ export default function PDFViewer({
             <FileText className="w-3.5 h-3.5" /> PDF Document Reader
           </span>
           <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
-            <a
-              href={pdfUrl}
-              download
-              className="flex-1 sm:flex-initial"
-            >
-              <Button variant="outline" size="sm" className="w-full gap-1.5 rounded-lg border-border hover:bg-background/80 hover:border-primary/50 cursor-pointer">
+            <a href={pdfUrl} download className="flex-1 sm:flex-initial">
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full gap-1.5 rounded-lg border-border hover:bg-background/80 hover:border-primary/50 cursor-pointer"
+              >
                 <Download className="w-3.5 h-3.5" /> Download
               </Button>
             </a>
-            <a
-              href={pdfUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="flex-1 sm:flex-initial"
-            >
-              <Button size="sm" className="w-full gap-1.5 bg-primary hover:bg-primary/95 text-primary-foreground font-medium rounded-lg shadow-sm cursor-pointer">
+            <a href={pdfUrl} target="_blank" rel="noreferrer" className="flex-1 sm:flex-initial">
+              <Button
+                size="sm"
+                className="w-full gap-1.5 bg-primary hover:bg-primary/95 text-primary-foreground font-medium rounded-lg shadow-sm cursor-pointer"
+              >
                 <ExternalLink className="w-3.5 h-3.5" /> Open Tab
               </Button>
             </a>
@@ -110,14 +103,21 @@ export default function PDFViewer({
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-2 shadow-inner border border-primary/10">
                 <BookOpen className="w-8 h-8" />
               </div>
-              <h3 className="font-semibold text-lg text-foreground">Interactive Reader on Mobile</h3>
+              <h3 className="font-semibold text-lg text-foreground">
+                Interactive Reader on Mobile
+              </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Mobile browsers do not support rendering interactive PDFs directly. Please use the options above to view or download the paper.
+                Mobile browsers do not support rendering interactive PDFs directly. Please use the
+                options above to view or download the paper.
               </p>
               {abstract && (
                 <div className="mt-4 p-4 rounded-xl bg-background/50 border border-border/50 text-left">
-                  <h4 className="text-xs font-semibold uppercase tracking-wider text-primary font-mono mb-2">Abstract Preview</h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-6">{abstract}</p>
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-primary font-mono mb-2">
+                    Abstract Preview
+                  </h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-6">
+                    {abstract}
+                  </p>
                 </div>
               )}
             </div>
@@ -127,7 +127,9 @@ export default function PDFViewer({
               {isLoading && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-background/60 backdrop-blur-sm z-10 transition-opacity duration-300">
                   <Loader2 className="w-8 h-8 text-primary animate-spin" />
-                  <span className="text-xs font-mono text-muted-foreground">Loading manuscript...</span>
+                  <span className="text-xs font-mono text-muted-foreground">
+                    Loading manuscript...
+                  </span>
                 </div>
               )}
               <iframe

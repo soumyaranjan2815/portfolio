@@ -109,13 +109,23 @@ function Portfolio() {
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between glass rounded-b-2xl">
           <div className="flex items-center gap-2">
             <Fish className="w-5 h-5 text-primary" />
-            <span className="font-display font-semibold tracking-tight">Soumya Ranjan Satapathy</span>
+            <span className="font-display font-semibold tracking-tight">
+              Soumya Ranjan Satapathy
+            </span>
           </div>
           <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
-            <a href="#research" className="hover:text-primary transition">Research</a>
-            <a href="#about" className="hover:text-primary transition">About</a>
-            <a href="#publications" className="hover:text-primary transition">Publications</a>
-            <a href="#contact" className="hover:text-primary transition">Contact</a>
+            <a href="#research" className="hover:text-primary transition">
+              Research
+            </a>
+            <a href="#about" className="hover:text-primary transition">
+              About
+            </a>
+            <a href="#publications" className="hover:text-primary transition">
+              Publications
+            </a>
+            <a href="#contact" className="hover:text-primary transition">
+              Contact
+            </a>
           </nav>
         </div>
       </header>
@@ -140,8 +150,7 @@ function Portfolio() {
               Researcher · Dept. of Zoology
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.05] mb-6">
-              Mapping life from{" "}
-              <span className="text-gradient">river beds</span> to{" "}
+              Mapping life from <span className="text-gradient">river beds</span> to{" "}
               <span className="text-gradient">forest canopies</span>.
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl mb-6">
@@ -402,10 +411,7 @@ function Portfolio() {
                     </div>
                     <div className="flex gap-2 flex-wrap">
                       {p.tags.map((t) => (
-                        <span
-                          key={t}
-                          className="px-2 py-0.5 rounded-full bg-secondary/60 text-xs"
-                        >
+                        <span key={t} className="px-2 py-0.5 rounded-full bg-secondary/60 text-xs">
                           {t}
                         </span>
                       ))}
@@ -436,9 +442,7 @@ function Portfolio() {
             className="glass rounded-3xl p-12 glow"
           >
             <Mail className="w-12 h-12 text-primary mx-auto mb-6" />
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-              Let's collaborate.
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">Let's collaborate.</h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               Open to research collaborations, field expeditions, and inquiries on freshwater
               biodiversity in eastern India.
