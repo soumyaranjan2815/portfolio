@@ -1,13 +1,7 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".tanstack/output/server",
+  "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": null,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
+  "framework": null
 }
